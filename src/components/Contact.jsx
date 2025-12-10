@@ -92,6 +92,7 @@ const Contact = () => {
   }, { scope: containerRef });
 
   return (
+    <>
     <div id="contact" ref={containerRef} className='my-20 min-h-96 w-screen px-10'>
       {/* Contact Card */}
       <div className='relative rounded-lg bg-black py-24 text-blue-50 sm:overflow-hidden'>
@@ -101,7 +102,7 @@ const Contact = () => {
           <ImageClipBox
             clipClass="contact-clip-path-1" 
             src="img/contact-1.webp"
-          />
+            />
         </div>
 
         {/* Right Image */}
@@ -109,7 +110,7 @@ const Contact = () => {
           <ImageClipBox
             clipClass="contact-clip-path-2 lg:translate-y-40 translate-y-60"
             src="img/contact-2.webp"
-          />
+            />
         </div>
 
         {/* Center Content */}
@@ -126,17 +127,17 @@ const Contact = () => {
           <Button 
             title="Contact Us" 
             containerClass="mt-10 cursor-pointer" 
-          />
+            />
 
           {/* Social Icons */}
           <div className="mt-12 flex items-center gap-6">
             {socialLinks.map((link, index) => (
               <a
-                key={index}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/5 text-2xl text-violet-400 transition-all duration-300 hover:bg-violet-500 hover:text-white hover:border-violet-500"
+              key={index}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/5 text-2xl text-violet-400 transition-all duration-300 hover:bg-violet-500 hover:text-white hover:border-violet-500"
               >
                 {link.icon}
                 <span className="absolute -top-8 scale-0 rounded bg-white px-2 py-1 text-xs font-bold text-black transition-all duration-300 group-hover:scale-100">
@@ -149,11 +150,11 @@ const Contact = () => {
       </div>
 
       {/* Footer Section - Placed immediately after the card */}
-      <div className="mt-10">
+      </div>
+      <div className="mt-10 w-full border-t border-white/10 pt-6 ">
         <Footer />
       </div>
-      
-    </div>
+    </>
   )
 }
 
